@@ -1,0 +1,123 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+body {
+    font-family: 'Noto Sans TC', sans-serif;} */
+
+.imgWrapper {
+    width: 100%;
+    margin: 20px;
+}
+
+.imgWrapper > img {
+    width: 75%;
+}
+
+.imgWrapper > p {
+    width: 75%;
+    margin: auto;
+    color: rgb(102, 99, 99);
+}
+
+.descriptionWrapper {
+    width: 70%;
+    margin: auto;
+    text-align: left;
+}
+
+.title {
+    font-size: 22px;
+    text-align: left;
+}
+
+.price {
+    font-weight: 800;
+    font-size: 22px;
+    color: rgb(65, 64, 64);
+}
+
+.color {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+span {
+    font-weight: 400;
+}
+
+#btn {
+    text-align: center;
+    border: 0;
+    padding: 15px;
+    background: #018849;
+    color: white;
+    width: 250px;
+    margin: auto;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 0px;
+}
+
+
+#btn:hover {
+    color: #ffffff;
+    background: #999999;
+  }
+
+  .size {
+    border: 1px solid #333333;
+    background: whitesmoke;
+    width: 80%;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    margin-top: 120px;
+    font-size: 12px;
+  }
+  
+  .size > p {
+      margin-top: -20px;
+      margin-left: 10px;
+  }
+  
+  .size > h5 {
+      margin-left: 10px;
+      
+  }
+  
+  .size > p > span {
+      text-decoration: underline;
+  }
+
+.details1, .details2, .details3 {
+      text-align: left
+  }
+
+.details2, .details3 {
+    margin-left: 23px;
+}
+  
+.details{
+    font-weight: 600;
+    color: grey;
+    margin-left: 23px;
+}
+
+.brand{
+    font-weight: 600;
+    color: grey;
+}
+
+.lookAfter {
+    font-weight: 600;
+    color: grey;
+}
+
+.about {
+    font-weight: 600;
+    color: grey;
+}
+
+.main {
+    font-weight: 600;
+    color: grey;
+}

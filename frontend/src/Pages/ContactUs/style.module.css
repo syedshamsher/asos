@@ -1,0 +1,54 @@
+html {
+    scroll-behavior: smooth;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.heading {
+    background-color: white;
+    width:100%;
+    margin-bottom: 20px;
+}
+
+.heading > h1 {
+    letter-spacing: 3px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 50%;
+    padding-top: 50px;
+    padding-bottom: 50px
+}
+
+.inputWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    text-align: left;
+}
+
+.inputWrapperBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex-direction: column;
+    text-align: left;
+}
+
+.inputWrapper > div {
+    text-align: left;
+    width: 80%;    
+}

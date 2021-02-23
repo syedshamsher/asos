@@ -1,0 +1,179 @@
+body {
+    background: #EEEEEE
+}
+
+/* .wrapper {
+    display: flex;
+    justify-content: space-evenly;
+} */
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.bag {
+    padding: 10px;
+    margin: 10px;
+    background: #FFFFFF;
+}
+
+.bagHead {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+}
+
+.bagHead > div {
+    margin: 10px;
+}
+
+.bagHead > div:first-child {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.bagBody {
+    text-align: left;
+    display: flex;
+    max-width: 500px;
+    margin: 10px;
+}
+
+
+.bagFooter {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footerInner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerInner > div {
+    margin: 20px;
+    font-weight: bold;
+}
+
+.imgCont > img {
+    width: 100px;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+.prodDetails > p {
+    overflow-x: hidden;
+    font-size: 14px;
+}
+
+.prodDetails {
+    width: 400px;
+}
+
+.colorAndRemove {
+    font-size: 12px;
+    font-style: italic;
+    display: flex;
+    justify-content:space-between;
+}
+
+.remove {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.delivery , .return {
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+    background: #FFFFFF;
+}
+
+a {
+    color: black;
+}
+
+.right {
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    background: #FFFFFF;
+    max-height: 300px;
+}
+
+.subTotal {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.subTotal > p {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.payment {
+}
+
+.weAccept {
+    margin: 10px;
+}
+
+.payment > img {
+    margin: 10px;
+}
+
+.discount {
+    margin: 10px;
+    line-height: 1px;
+}
+
+.totalHead {
+    margin-left: 15px;
+}
+
+.totalBody > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 20px;
+    border: 0;
+    padding: 15px;
+    background: #018849;
+    color: white;
+    width: 300px;
+    /* margin: auto; */
+    cursor: pointer;
+    /* margin-top: 10px; */
+    border-radius: 0px;
+}
+
+.footer {
+    margin-left: 10px;
+}
+
+.remove {
+    
+}
+
+@media screen and (max-width:400px) {
+    .totalBody > button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 20px;
+        border: 0;
+        padding: 15px;
+        background: #018849;
+        color: white;
+        width: 230px;
+        /* margin: auto; */
+        cursor: pointer;
+        /* margin-top: 10px; */
+        border-radius: 0px;
+    }
+}

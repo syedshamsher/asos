@@ -1,0 +1,88 @@
+body {
+    background-color: #EEEEEE;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typeHeader {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #525050;
+}
+
+.loginBtn {
+    color: whitesmoke;
+    padding: 5px;
+    font-weight: 800;
+    margin: 10px;
+    background-color: #d01345;
+    transform: skew(-12deg);
+    cursor: pointer;
+}
+
+.registerBtn {
+    color: whitesmoke;
+    padding: 5px;
+    margin: 10px;
+    font-weight: 800;
+    background-color: #d01345;
+    transform: skew(-12deg);
+    cursor: pointer;
+    
+}
+
+.login {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px
+}
+
+.inputWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 82%;
+    flex-direction: column;
+    text-align: left;
+}
+
+.inputWrapper > div {
+    text-align: left;
+    width: 80%;    
+}
+
+label {
+    font-weight: 600;
+    color: rgb(53, 52, 52);
+}
+
+@media (max-width: 600px) {
+    .login {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,51 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #eee;
+}
+
+a {
+    font-size: 14px;
+}
+
+h5 {
+    font-size: 13px;
+}
+
+.mediaAndPayment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    border-top: 1px solid rgb(197, 197, 197);
+    padding: 20px;
+    /* width: 100%; */
+}
+
+.media {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.media > img {
+    margin-left: 20px;
+}
+
+.media  :first-child  {
+    /* margin-left: 70% ; */
+}
+
+.payment {
+    display: flex;
+    /* justify-content: flex-start; */
+    width: 100%;
+}
+
+.payment > img {
+    margin-left: 20px;
+}
+
+.payment :first-child {
+    /* margin-left: 10%; */
+}

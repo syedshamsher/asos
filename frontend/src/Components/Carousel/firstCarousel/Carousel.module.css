@@ -1,0 +1,31 @@
+.cardContainer{
+    /* background-color: grey;
+    width:150px; */
+}
+
+
+.carousel_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:96%;
+    /* margin-top: 10px; */
+    padding:20px;
+    padding-top: 10px;
+    /* margin-bottom: 20px;  */
+}
+
+.carousel_wrapper div{
+    text-align: left;
+}
+
+.mainContainer{
+    align-items: center;
+    /* padding: 15px; */
+    height: 250px;
+    width: 80%;
+    background-color:whitesmoke;
+    color: black;
+    margin: 0 15px;
+    box-sizing: border-box;
+}

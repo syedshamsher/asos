@@ -1,0 +1,313 @@
+.wrapper {
+    
+}
+
+.discountDiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+.discountDivLeft {
+    width: 100%;
+    background-color: #EA92B2;
+    line-height: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+}
+.discountDivRight {
+    width: 100%;
+    background-color: black;
+    line-height: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.offer1 {
+    background-image: url("https://content.asos-media.com/-/media/homepages/unisex/homepages/2020/11-nov/black-friday-2020/wk12/generic-warm-up/all-desktop-1wu-bf-hp-banner-2880x600.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 300px;
+    margin-top: 25px;
+}
+
+
+.offerHeading1 {
+    color: rgb(253, 254, 202);
+    transform: skew(-12deg);
+    font-weight: 500;
+    width: 250px;
+    margin: auto;
+    line-height: 35px;
+    letter-spacing: -0.1rem;
+
+}
+
+.offerHeading1 > span {
+    font-weight: 900;
+
+}
+
+.offerHeading1 > div {
+    padding-top: 1px;
+}
+
+.offerHeading1Sub > h1 {
+    background:#333333;
+
+}
+
+.offerHeading2 {
+    color: black;
+    margin: auto;
+    transform: skew(0deg);
+    width: 50%;
+}
+
+.offerHeading2 > h1 {
+    background-color: rgb(253, 254, 202);
+    font-size: 50px;
+    transform: skew(-14deg);
+    font-weight: 800;
+    line-height: 50px;    
+}
+
+.offerHeading3 {
+    color: black;
+    margin: auto;
+    transform: skew(0deg);
+    width: 50%;
+    padding-top: 10px;
+}
+
+.offerHeading3 > h1 {
+    background-color: #15A66D;
+    font-size: 50px;
+    transform: skew(-14deg);
+    font-weight: 800;
+    line-height: 50px;    
+}
+
+
+
+.offer2 {
+    background-image: url("https://content.asos-media.com/-/media/homepages/unisex/homepages/2021/01_jan/promo-pack/letters/promo_dt_hero_live_banner_peak_biga_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 300px;
+    margin-top: 25px;
+    color: white;
+    
+}
+
+.offer2Heading1 {
+    color: black;
+    transform: skew(-12deg);
+    font-weight: 500;
+    width: 250px;
+    margin: auto;
+    line-height: 35px;
+
+}
+
+.offer2Heading1 > h1 {
+    background-color: whitesmoke;
+    font-size: 32px;
+    transform: skew(-14deg);
+    font-weight: 800;
+    padding-bottom: 5px;
+
+}
+.offer2Heading2 {
+    margin-top: 100px;
+    color: black;
+}
+.photos1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+
+.photos1Wrapper > img {
+    width: 250px;
+}
+
+
+.photos2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+
+.photos2Wrapper > img {
+    width: 80%;
+}
+
+.trendingBrandsImg {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.trendingBrandsImg > img {
+    width: 180px;
+}
+
+.bannerWrapper {
+    background-image: url("https://content.asos-media.com/-/media/homepages/unisex/homepages/2020/12-dec/xmas-sale/global/mw_desk_1440x664_green.jpg");
+    background-size: cover;
+    height: 550px;
+    margin-top: 20px;
+}
+
+.banner > h1 {
+    padding-top: 10px;
+    color: white;
+    font-size: 55px;
+
+}
+
+.banner > button {
+    width: 250px;
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: .2rem;
+    font-weight: bolder;
+    outline: none;
+    color: whitesmoke;
+    background-color: #d01345;
+    border: none;
+
+}
+
+/* @media (max-width: 320px) {
+    .offer1 {
+        background-image: url("https://content.asos-media.com/-/media/homepages/unisex/homepages/2020/11-nov/black-friday-2020/wk12/generic-warm-up/all-desktop-1wu-bf-hp-banner-2880x600.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 300px;
+        margin-top: 20px;
+        }
+    .offerHeading2 {
+        color: black;
+        margin: auto;
+        transform: skew(0deg);
+        width: 100%;
+    }
+    
+    .offerHeading2 > h1 {
+        background-color: rgb(253, 254, 202);
+        font-size: 15px;
+        transform: skew(-14deg);
+        font-weight: 800;
+        line-height: 15px;    
+    }
+} */
+
+@media (max-width: 480px) {
+.offer1 {
+    background-image: url("https://content.asos-media.com/-/media/homepages/unisex/homepages/2020/11-nov/black-friday-2020/wk12/generic-warm-up/all-desktop-1wu-bf-hp-banner-2880x600.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 300px;
+    margin-top: 20px;
+    }
+.offerHeading2 {
+    color: black;
+    margin: auto;
+    transform: skew(0deg);
+    width: 80%;
+}
+
+.offerHeading2 > h1 {
+    background-color: rgb(253, 254, 202);
+    font-size: 25px;
+    transform: skew(-14deg);
+    font-weight: 800;
+    line-height: 35px;    
+}
+.offerHeading3 {
+    color: black;
+    margin: auto;
+    transform: skew(0deg);
+    width: 70%;
+}
+
+.offerHeading3 > h1 {
+    background-color: #15A66D;
+    font-size: 25px;
+    transform: skew(-14deg);
+    font-weight: 800;
+    line-height: 45px;    
+}
+}
+
+@media (min-width: 481px) {
+    .offerHeading2 {
+        color: black;
+        margin: auto;
+        transform: skew(0deg);
+        width: 50%;
+    }
+    .offerHeading2 > h1 {
+        background-color: rgb(253, 254, 202);
+        font-size: 25px;
+        transform: skew(-14deg);
+        font-weight: 800;
+        line-height: 45px;    
+    }
+    .offerHeading3 {
+        color: black;
+        margin: auto;
+        transform: skew(0deg);
+        width: 50%;
+    }
+    
+    .offerHeading3 > h1 {
+        background-color: #15A66D;
+        font-size: 30px;
+        transform: skew(-14deg);
+        font-weight: 800;
+        line-height: 45px;    
+    }
+
+    .offer2Heading1 {
+        color: black;
+        transform: skew(-12deg);
+        font-weight: 500;
+        width: 50%;
+        margin: auto;
+        line-height: 45px;
+    
+    }
+    
+    .offer2Heading1 > h1 {
+        background-color: whitesmoke;
+        font-size: 40px;
+        transform: skew(-14deg);
+        font-weight: 800;
+        padding-bottom: 5px;
+    
+    }
+    .offer2Heading2 {
+        margin-top: 50px
+    }
+}

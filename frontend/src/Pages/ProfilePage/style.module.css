@@ -1,0 +1,98 @@
+.main {
+    background-image: url('https://content.asos-media.com/-/media/homepages/unisex/homepages/2020/12-dec/xmas-sale/global/mw_desk_1440x664_red.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #810102;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.orderHeading {
+    background-color: white;
+    margin-top:80px;
+    height: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.bag {
+    padding: 10px;
+    margin: 10px;
+}
+
+.bagHead {
+    display: flex;
+    justify-content: space-between;
+    max-width: 98%;
+    background-color: #FFFFFF;
+    margin-left: 1%;
+}
+
+.bagHead > div {
+    margin: 10px;
+}
+
+.bagHead > div:first-child {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.bagBody {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 10px;
+    padding-left: 20px;
+    background: #FFFFFF;
+
+}
+
+
+.bagFooter {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imgCont {
+    display: flex;
+}
+
+.imgCont > img {
+    width: 100px;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+.prodDetails > p {
+    overflow-x: hidden;
+    font-size: 14px;
+}
+
+.prodDetails {
+    width: 400px;
+}
+
+.colorAndRemove {
+    font-size: 12px;
+    font-style: italic;
+    display: flex;
+    justify-content:space-between;
+}
+
+.remove {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}

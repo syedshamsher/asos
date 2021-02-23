@@ -1,0 +1,22 @@
+GET http://localhost:5000/
+
+###
+
+POST http://localhost:5000/asos/account/register/
+Content-Type: application/json
+
+{
+    "first_name": "Sam",
+    "last_name": "Ali",
+    "email": "shamsherali78620@gmail.com",
+    "password": "shamsher123"
+}
+###
+
+POST http://localhost:5000/asos/user/profile/
+Content-Type: application/json
+
+{
+    "email": "shamsherali78620@gmail.com",
+    "password": "shamsher123"
+}

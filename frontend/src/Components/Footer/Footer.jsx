@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import styles from "./Footer.module.css"
 import styled from "styled-components"
 
+
 const FooterWrapper = styled.footer`
   padding-top: 15px;
   padding-bottom: 15px;

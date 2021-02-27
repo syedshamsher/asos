@@ -1,9 +1,19 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import styles from './ViewProduct.module.css'
-import { Button, Grid } from '@material-ui/core'
+import styles from './ViewProduct.module.css';
+import { Button, Grid } from '@material-ui/core';
 import { addToCart } from '../../Redux/Cart/actions';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  grid: {
+    width: '88%',
+    justifyContent: 'center', 
+    alignItems: 'center',
+    margin: 'auto'
+  }
+})
 
 export function ViewProduct() {
     const menProducts = useSelector(state => state.menProducts.menProducts);
@@ -14,6 +24,8 @@ export function ViewProduct() {
     const dispatch = useDispatch()
     let urlArray = history.location.pathname.split("/")
     let id = urlArray[2]
+
+    const classes= useStyles();
     
     const getProductById = (id) => {
         return menProducts?.find((product) => product.id === id) || womenProducts?.find((product) => product.id === id)
@@ -59,7 +71,7 @@ export function ViewProduct() {
                         </div>
                       </Grid>
                   </Grid>
-                  <Grid container spacing={2}>
+                  <Grid container spacing={2} className={classes.grid}>
                     <Grid item  xs={12}  sm={12} md={4} xl={4}>
                         <div className={styles.details1}>
                             <p  className={styles.details}>PRODUCT DETAILS</p>

@@ -13,12 +13,11 @@
 .orderHeading {
     background-color: white;
     margin-top:80px;
-    height: 80px;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: column;
 }
 
 .left {

@@ -4,6 +4,8 @@ import { getActiveUser, getCartData } from '../../Redux/Auth/actions';
 import styles from './style.module.css';
 import { useDispatch, useSelector } from "react-redux";
 import { CarouselContainer } from '../../Components/Carousel/firstCarousel//CarouselContainer';
+import { Container, Grid } from '@material-ui/core';
+import { AllProductItem } from '../../Components/AllProductItem/AllProductItem';
 
 const breakPoints = [
 
@@ -58,6 +60,21 @@ export const Home = () => {
                         </div>
                         <div> <CarouselContainer breakPoints={breakPoints} allProducts={allProducts} /> </div>
             </div>
+            <Container >
+                <div style={{display: 'flex', justifyContent:'center', alignItems: 'center'}}> 
+                <Grid container spacing={2} className="" >
+                    {
+                        allProducts.slice(0, 8).map((product) => {
+                        return (
+                                <Grid item  xs={12}  sm={6} md={3} xl={3} className="" key = {product.id}>
+                                    <AllProductItem {...product} />
+                                </Grid>
+                        )
+                        })
+                    }
+                </Grid>
+                </div>
+            </Container>
             <div className= {styles.offer2}>
                         <div>
                             <div className= {styles.offer2Heading1}>
@@ -69,6 +86,21 @@ export const Home = () => {
                         Limited time only. Selected styles marked down on site.
                         </div>
             </div>
+            <Container >
+                <div style={{display: 'flex', justifyContent:'center', alignItems: 'center'}}> 
+                <Grid container spacing={2} className="" >
+                    {
+                        allProducts.slice(8, 16).map((product) => {
+                        return (
+                                <Grid item  xs={12}  sm={6} md={3} xl={3} className="" key = {product.id}>
+                                    <AllProductItem {...product} />
+                                </Grid>
+                        )
+                        })
+                    }
+                </Grid>
+                </div>
+            </Container>
         </div>
     )
 }

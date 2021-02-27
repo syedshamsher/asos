@@ -5,7 +5,7 @@ import styles from "./style.module.css"
 import "./style.module.css"
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch} from 'react-redux';
-import { logout } from '../../Redux/Auth/actions'
+import { search } from '../../Redux/SearchedProducts/action'
 
 const Top = styled.div`
   display: flex;
@@ -46,16 +46,43 @@ const Input = styled.input`
   font-size: 1em;
   padding-left: 20px;
   border: none;
-  border-radius: 20px;
+  border-radius: none;
   outline: none;
   height: 30px;
 
+`
+
+const Search = styled.button `
+    width: 100px;
+    color: #525050;
+    font-size: 1em;
+    border: none;
+    border-radius: none;
+    outline: none;
+    height: 30px;
+    background-color: #ddd
+`
+
+const SearchContainer = styled.div `
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #525050;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: whitesmoke;
+  justify-content: center;
+  
+    button {
+      margin-left: 10px
+    }
 `
 
 const SubOption = styled.div`
     color: white;
     width: 100px;
     font-size: 12px;
+    cursor: pointer;
     &:hover {
       width: 100px;
       font-weight: 800;
@@ -83,7 +110,7 @@ const links = [
     },
     {
       title: "SEARCH",
-      to: "/search",
+      to: "/query",
     },
     {
       title: "CART",
@@ -110,7 +137,7 @@ const loggedInLinks = [
   },
   {
     title: "SEARCH",
-    to: "/search",
+    to: "/query",
   },
   {
     title: "CART",
@@ -122,14 +149,12 @@ function Navbar() {
   const token = useSelector(state => state.auth.token)
   const dispatch = useDispatch()
 
-  const handleLogout = () => {
-    alert("Logging Out....")
-    dispatch(logout())
-  }
+
+
     return (
       <>
         <Top>
-          <div className={styles.top} onClick={handleLogout} >Marketplace</div>
+          <div className={styles.top} >Marketplace</div>
           <div className={styles.top} >Help &amp; FAQs</div>
           <div className={styles.top} >India</div>
         </Top>
@@ -146,7 +171,8 @@ function Navbar() {
                                         key={i} 
                                         to={link.to}
                                         exact
-                                        activeStyle={{padding: "12px 14px 12px 14px",
+                                        activeStyle={{
+                                                      padding: "12px 14px 12px 14px",
                                                       fontWeight: 800,
                                                       backgroundColor: "#525050",
                                                       }} >
@@ -156,7 +182,8 @@ function Navbar() {
                                         key={i} 
                                         to={link.to}
                                         exact
-                                        activeStyle={{padding: "12px 14px 12px 14px",
+                                        activeStyle={{
+                                                      padding: "12px 14px 12px 14px",
                                                       fontWeight: 800,
                                                       backgroundColor: "#525050",
                                                       }} >
@@ -168,34 +195,35 @@ function Navbar() {
         {
           history.location.pathname === "/men"  &&
           <SubNav>
-              <SubOption>Clothing</SubOption>
-              <SubOption>Shoes</SubOption>
-              <SubOption>Accessories</SubOption>
-              <SubOption>Face+Body</SubOption>
+              <SubOption >Clothing</SubOption>
+              <SubOption >Shoes</SubOption>
+              <SubOption >Accessories</SubOption>
+              <SubOption >Face+Body</SubOption>
           </SubNav> 
         }
         {
           history.location.pathname === "/women" &&
           <SubNav>
-              <SubOption>Clothing</SubOption>
-              <SubOption>Shoes</SubOption>
-              <SubOption>Accessories</SubOption>
-              <SubOption>Face+Body</SubOption>
+              <SubOption >Clothing</SubOption>
+              <SubOption >Shoes</SubOption>
+              <SubOption >Accessories</SubOption>
+              <SubOption >Face+Body</SubOption>
           </SubNav>
         }
         {
-          history.location.pathname === "/search" &&
-          <SubNav style={{height:"40px"}}>
-              <Input type="text" placeholder="SEARCH" />
-          </SubNav>
+          history.location.pathname === "/query" &&
+          <SearchContainer style={{height:"40px"}}>
+              <Input type="text" placeholder="Search" />
+              <Search >Search</Search>
+          </SearchContainer>
         }
         {
           history.location.pathname === "/" &&
           <SubNav>
-              <SubOption>Sale</SubOption>
-              <SubOption>New in</SubOption>
-              <SubOption>Trending</SubOption>
-              <SubOption>Brands</SubOption>
+              <SubOption >Sale</SubOption>
+              <SubOption >New in</SubOption>
+              <SubOption >Trending</SubOption>
+              <SubOption >Brands</SubOption>
           </SubNav>
         }
        

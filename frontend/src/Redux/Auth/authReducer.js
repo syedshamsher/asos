@@ -92,7 +92,7 @@ export const authReducer = (state = initState, { type, payload }) => {
            return {
                ...state,
                isLoading: false,
-               cart: cartData,
+               cart: !cartData ? [] : cartData,
                error: null
           }
 
@@ -119,7 +119,7 @@ export const authReducer = (state = initState, { type, payload }) => {
            return {
                ...state,
                isLoading: false,
-               orders: orderData,
+               orders: !orderData ? [] : orderData,
                error: null
           }
 
@@ -131,7 +131,7 @@ export const authReducer = (state = initState, { type, payload }) => {
               isLoading: false,
               error: payload,
               token: falseToken,
-              orders: null
+              orders: []
           }
 
       case LOGOUT:
@@ -142,7 +142,8 @@ export const authReducer = (state = initState, { type, payload }) => {
               token: inActiveState,
               error: null,
               cart: [],
-              activeUser: []
+              activeUser: [],
+              orders: [],
           }
 
       default:

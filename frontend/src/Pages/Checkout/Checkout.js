@@ -1,7 +1,7 @@
 import { CircularProgress, Grid } from '@material-ui/core'
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { Redirect } from 'react-router-dom'
+import { Redirect, useHistory } from 'react-router-dom'
 import { getCartData, getActiveUser } from '../../Redux/Auth/actions'
 import { loadData } from '../../Utils/LocalStorage'
 import styles from './Checkout.module.css'
@@ -47,15 +47,18 @@ const Button = styled.button`
 export const Checkout = () => {
     const cart = useSelector(state => state.auth.cart);
     const activeUser = useSelector(state => state.auth.activeUser);
-    const [isLoading, setIsLoading] = React.useState(false)
-    const [email, setEmail] = React.useState("")
-    const [firstname, setFirstName] = React.useState("")
-    const [lastname, setLastName] = React.useState("")
-    const [city, setCity] = React.useState("")
-    const [country, setCountry] = React.useState("")
-    const [postCode, setPostCode] = React.useState("")
-    const [mobile, setMobile] = React.useState("")
-    const [address, setAddress] = React.useState("")
+    const history = useHistory();
+    const [isLoading, setIsLoading] = React.useState(false);
+    const [email, setEmail] = React.useState("");
+    const [firstname, setFirstName] = React.useState("");
+    const [lastname, setLastName] = React.useState("");
+    const [city, setCity] = React.useState("");
+    const [country, setCountry] = React.useState("");
+    const [postCode, setPostCode] = React.useState("");
+    const [mobile, setMobile] = React.useState("");
+    const [address, setAddress] = React.useState("");
+
+    console.log(history);
     
     const dispatch = useDispatch()
     let localToken = loadData('token')
@@ -116,7 +119,7 @@ export const Checkout = () => {
                   }
               }
               await Axios(config)
-                .then((res) => alert("success"))
+                .then((res) => history.push('/user/profile'))
                 .catch((err) => alert("error"))
               
             } catch (err) {

@@ -7,6 +7,8 @@ import styled from 'styled-components'
 import { getActiveUser, getCartData, getOrderData } from '../../Redux/Auth/actions';
 import { loadData } from '../../Utils/LocalStorage';
 import { Redirect } from 'react-router-dom';
+import { logout } from '../../Redux/Auth/actions'
+
 
 const Button = styled.button`
     width: 32%;
@@ -19,6 +21,20 @@ const Button = styled.button`
     border: none;
     color: whitesmoke;
     background-color: #333333;
+`
+
+const Logout = styled.button`
+    width: 10%;
+    height: 50px;
+    margin: 1px;
+    font-size: 16px;
+    letter-spacing: .2rem;
+    font-weight: bolder;
+    outline: none;
+    border: none;
+    color: whitesmoke;
+    background-color: #333333;
+    margin-bottom: 20px;
 `
 
 const useStyles = makeStyles((theme) => ({
@@ -47,32 +63,38 @@ const useStyles = makeStyles((theme) => ({
         padding: '20px'
     },
   }));
+
 export const Profile = () => {
     const classes = useStyles()
     const dispatch = useDispatch()
     const activeUser = useSelector(state => state.auth.activeUser)
-    const orders = useSelector(state => state.auth.orders)
+    const {order} = useSelector(state => state.auth.orders)
     let localToken = loadData('token')
-    console.log(orders)
-
+    
     const handleOrderDetails = () => {
-
-
+        
+        
     }
 
+    
+    const handleLogout = () => {
+        alert("Logging Out....")
+        dispatch(logout())
+    }
+    
     React.useState(() => {
         dispatch(getActiveUser())
         dispatch(getCartData())
         dispatch(getOrderData())
     },[dispatch]);
-
+    
     return (
         <>
         {
             !localToken && <Redirect to='/auth' />
         }
         {
-            localToken  && orders.order.length === undefined &&
+            localToken  && !order &&
                 (<div className={classes.root}>
                         <div className={styles.main}>
                             <Avatar className={classes.avatar}>
@@ -98,7 +120,7 @@ export const Profile = () => {
                 </div>)
         }
         {
-            localToken && orders.order.length > 0 &&
+            localToken && order &&
                 (<div className={classes.root}>
                     <div className={styles.main}>
                         <Avatar className={classes.avatar}>
@@ -107,6 +129,9 @@ export const Profile = () => {
                     </div>
                     <div className={styles.orderHeading}>
                         <h1>{activeUser.first_name}'s Account</h1>
+                        <Logout onClick={handleLogout}>
+                                LOGOUT
+                        </Logout>
                     </div>
                     <Container className={classes.cont}>
                         <Box className={classes.box}>
@@ -124,7 +149,7 @@ export const Profile = () => {
                                                 </div>
                                             </div>
                                             {
-                                                orders.order?.map((item, i) => {
+                                                order?.reverse().map((item, i) => {
                                                     return(
                                                         <div key={i} className={styles.bagBody}>
                                                             <div >

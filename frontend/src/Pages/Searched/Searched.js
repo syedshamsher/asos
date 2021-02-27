@@ -1,8 +1,9 @@
-import React from 'react'
-import { Card, Container, Grid } from '@material-ui/core'
-import { WomenProductItem } from '../../Components/WomenProductItem/WomenProductItem'
-import { getWomenProducts } from '../../Redux/WomenProducts/actions'
-import { useDispatch, useSelector } from "react-redux";
+import { Card, Container, Grid } from '@material-ui/core';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { AllProductItem } from '../../Components/AllProductItem/AllProductItem';
+import { getAllProducts } from '../../Redux/AllProducts/actions';
+import { getActiveUser, getCartData } from '../../Redux/Auth/actions';
 import { makeStyles } from '@material-ui/core/styles';
 import Skeleton from '@material-ui/lab/Skeleton';
 
@@ -18,23 +19,27 @@ const useStyles = makeStyles({
 
 })
 
-export function WomenProducts() {
-    const womenProducts = useSelector(state => state.womenProducts.womenProducts)
-    const dispatch = useDispatch()
+export const Searched = () => {
+
+    const allProducts = useSelector(state => state.allProducts.allProducts)
     const [loading, setLoading] = React.useState(false)
     const classes = useStyles();
-
+    const dispatch = useDispatch()
+    
     React.useEffect(() =>{
         setLoading(true)
         setTimeout(() => setLoading(false),1000)
-        dispatch(getWomenProducts())
+        dispatch(getAllProducts())
+        dispatch(getActiveUser())
+        dispatch(getCartData())
     },[])
+
     return (
         <Container >
             <div style={{display: 'flex', justifyContent:'center', alignItems: 'center'}}> 
             <Grid container spacing={2} className="" >
                 {
-                    womenProducts.map((product) => {
+                    allProducts.map((product) => {
                     return (
                             <Grid item  xs={12}  sm={6} md={3} xl={3} className="" key = {product.id}>
                                 { loading ?
@@ -48,14 +53,14 @@ export function WomenProducts() {
                                         </div>
                                     </div>
                                         :
-                                    <WomenProductItem {...product} />
+                                    <AllProductItem {...product} />
                                 }
                             </Grid>
                     )
                     })
                 }
             </Grid>
-          </div>
+            </div>
         </Container>
     )
 }

@@ -14,6 +14,7 @@ import { Profile } from '../Pages/ProfilePage';
 import { loginSuccess } from '../Redux/Auth/actions';
 import { loadData } from '../Utils/LocalStorage';
 import { Checkout } from '../Pages/Checkout/Checkout';
+import { Searched } from '../Pages/Searched/Searched';
 
 function Routes() {
     const dispatch = useDispatch();
@@ -30,6 +31,7 @@ function Routes() {
                 <Route path="/user/profile" exact render={() => <Profile />} />
                 <Route path="/men" exact render={() => <MenProducts />} />
                 <Route path="/women" exact render={() => <WomenProducts />} />
+                <Route path="/query" exact render={() => <Searched />} />
                 <Route path="/men/:product_id" exact render={() => <ViewProduct />} />
                 <Route path="/women/:product_id" exact render={() => <ViewProduct />} />
                 <Route path="/cart" exact render={() => <Cart />} />

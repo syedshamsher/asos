@@ -13,7 +13,7 @@ server.use(responseTime());
 dotenv.config();
 
 //connection to dataBase
-mongoose.connect(process.env.MONGO_ATLAS_URI, {
+mongoose.connect(process.env.MONGO_ATLAS_URI || 'development', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true

@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import styles from './ViewProduct.module.css';
-import { Button, Grid } from '@material-ui/core';
+import { Button, CircularProgress, Grid } from '@material-ui/core';
 import { addToCart } from '../../Redux/Cart/actions';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -20,6 +20,8 @@ export function ViewProduct() {
     const womenProducts = useSelector(state => state.womenProducts.womenProducts);
     const activeUser = useSelector(state => state.auth.activeUser)
     const [localState, setLocalState] = React.useState()
+    const [added, setAdded] = React.useState(false)
+    const [isLoading, setIsLoading] = React.useState(false)
     let history = useHistory()
     const dispatch = useDispatch()
     let urlArray = history.location.pathname.split("/")
@@ -32,12 +34,17 @@ export function ViewProduct() {
       }
     
     const add = () => {
+      setIsLoading( true )
       console.log(activeUser)
       let addToCartDetails = {
         user_id: activeUser._id,
         cart: localState
       }
       dispatch( addToCart(addToCartDetails) )
+      setTimeout(() => {
+        setAdded(true)
+        setIsLoading(false)
+      }, 1000)
     }
 
     React.useEffect(() => {
@@ -63,7 +70,11 @@ export function ViewProduct() {
                           <h3 className={styles.price}> ₹  {localState.price} </h3>
                           <p> Free delivery (Ts &amp; Cs apply) </p>
                           <p className={styles.color}> Color :<span> {localState.color} </span> </p>
-                          <Button id={styles.btn} onClick={add} >ADD TO BAG</Button>
+                          <Button id={styles.btn} onClick={add} disabled={added} >
+                                { isLoading && <CircularProgress size={20} color="inherit" /> }
+                                { !isLoading && !added && 'ADD TO BAG'}
+                                { !isLoading && added && 'ADDED'}
+                          </Button>
                           <div className={styles.size}>
                             <h5>SIZING HELP</h5>
                             <p>Still unsure what size to get? <span>Find your <br/> recommended size. </span></p>

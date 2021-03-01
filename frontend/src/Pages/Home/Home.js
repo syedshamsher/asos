@@ -10,10 +10,10 @@ import { AllProductItem } from '../../Components/AllProductItem/AllProductItem';
 const breakPoints = [
 
     { width: 200, itemsToShow: 1 },
-    { width: 300, itemsToShow: 2 },
-    { width: 480, itemsToShow: 3 },
-    { width: 550, itemsToShow: 4 },
-    { width: 768, itemsToShow: 5 },
+    { width: 300, itemsToShow: 1 },
+    { width: 480, itemsToShow: 2 },
+    { width: 750, itemsToShow: 3 },
+    { width: 905, itemsToShow: 4 },
     { width: 1200, itemsToShow: 5 },
     { width: 1500, itemsToShow: 5 }
   ];

@@ -1,4 +1,4 @@
-import { Avatar, Box, Container, Grid, Typography } from '@material-ui/core'
+import { Avatar, Box, CircularProgress, Container, Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import styles from './style.module.css'
 import { makeStyles } from '@material-ui/core/styles';
@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import styled from 'styled-components'
 import { getActiveUser, getCartData, getOrderData } from '../../Redux/Auth/actions';
 import { loadData } from '../../Utils/LocalStorage';
-import { Redirect } from 'react-router-dom';
+import { Redirect, useHistory } from 'react-router-dom';
 import { logout } from '../../Redux/Auth/actions'
 
 
@@ -69,8 +69,10 @@ export const Profile = () => {
     const dispatch = useDispatch()
     const activeUser = useSelector(state => state.auth.activeUser)
     const {order} = useSelector(state => state.auth.orders)
+    const [isLoading, setIsLoading] = React.useState(false)
     let localToken = loadData('token')
-    
+    const history = useHistory()
+    console.log( activeUser )
     const handleOrderDetails = () => {
         
         
@@ -78,8 +80,12 @@ export const Profile = () => {
 
     
     const handleLogout = () => {
-        alert("Logging Out....")
-        dispatch(logout())
+        setIsLoading( true)
+        
+        setTimeout(() => {
+            dispatch(logout())
+            setIsLoading( false )
+        },1000)
     }
     
     React.useState(() => {
@@ -103,6 +109,10 @@ export const Profile = () => {
                         </div>
                         <div className={styles.orderHeading}>
                             <h1>{activeUser.first_name}'s Account</h1>
+                            <Logout onClick={handleLogout}>
+                                { isLoading && <CircularProgress size={20} color="inherit" /> }
+                                { !isLoading && 'LOGOUT'}
+                            </Logout>
                         </div>
                         <Container className={classes.cont}>
                             <Box className={classes.box}>
@@ -112,7 +122,7 @@ export const Profile = () => {
                                 <Typography>
                                     You currently have no orders
                                 </Typography>
-                                <Button>
+                                <Button onClick={() => history.push('/')}>
                                     START SHOPPING
                                 </Button>
                             </Box>
@@ -130,7 +140,8 @@ export const Profile = () => {
                     <div className={styles.orderHeading}>
                         <h1>{activeUser.first_name}'s Account</h1>
                         <Logout onClick={handleLogout}>
-                                LOGOUT
+                                { isLoading && <CircularProgress size={20} color="inherit" /> }
+                                { !isLoading && 'LOGOUT'}
                         </Logout>
                     </div>
                     <Container className={classes.cont}>

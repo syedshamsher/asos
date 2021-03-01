@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const shoppingRoute = require('./routes/shopping')
 const responseTime = require('response-time');
+const path = require("path");
 
 const server = express();
 server.use(express.json());
@@ -30,3 +31,8 @@ server.use('/asos', shoppingRoute)
 server.listen(5000, () => {
     console.log("server is up and running");
 })
+
+// rendering front-end
+const routes=['/','/auth','/user/profile','/men','/women','/query','/men/:product_id','/women/:product_id','/cart','/contact','/cart/checkout']
+routes.map(route=>server.get(route,(req,res)=>{res.sendFile(path.join(__dirname,'..', 'frontend','build','index.html'));}))
+routes.map(route=>server.use(route,express.static(path.join(__dirname, '..', 'frontend','build'))))

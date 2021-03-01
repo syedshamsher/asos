@@ -50,6 +50,7 @@ const Login = () => {
     const [regPassword, setRegPassword] = React.useState("")
     const [loginEmail, setLoginEmail] = React.useState("")
     const [loginPassword, setLoginPassword] = React.useState("")
+    const [alertInterval, setAlertInterval] = React.useState(false)
     const [loading, setLoading] = React.useState(false)
 
     const history = useHistory()
@@ -83,7 +84,8 @@ const Login = () => {
         setRegPassword("")
         if( isRegister ) {
             setTimeout(() => setLoading(false), 2000)
-            setTimeout(() => setType(true), 3000)
+            setTimeout(() => setType(true), 1000)
+            setTimeout(() => setAlertInterval(true), 1000)
         }
     }
 
@@ -131,7 +133,7 @@ const Login = () => {
                                 { !isLoading && 'SUBMIT'}
                             </Button>
                         </div>
-                            {!isLoading && error && (
+                            {!isLoading && error && !alertInterval && (
                                 <Alert variant="filled" severity="error" style={{height: '18px', display: 'flex', alignItems: 'center', fontSize:13}}>
                                     {error.data}
                                 </Alert>
@@ -189,10 +191,10 @@ const Login = () => {
                                 { !regIsLoading && 'JOIN ASOS'}
                             </Button>
                         </div>
-                        { isRegister && <Alert variant="filled" severity="success">
+                        { isRegister && !alertInterval && <Alert variant="filled" severity="success">
                                                 Successfully registered
                                         </Alert>}
-                        {!regIsLoading && regError && (
+                        {!regIsLoading && regError && !alertInterval && (
                             <Alert variant="filled" severity="error" style={{height: '18px', display: 'flex', alignItems: 'center', fontSize:13}}>
                                  {regError.data}
                             </Alert>

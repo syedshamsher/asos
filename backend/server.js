@@ -28,7 +28,9 @@ mongoose.connect(process.env.MONGO_ATLAS_URI || 'development', {
 
 server.use('/asos', shoppingRoute)
 
-server.listen(5000, () => {
+const port = process.env.PORT || 5000
+
+server.listen(port, () => {
     console.log("server is up and running");
 })
 

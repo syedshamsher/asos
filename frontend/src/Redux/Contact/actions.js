@@ -23,7 +23,7 @@ export const contactUser = (userDetails) => (dispatch) => {
   dispatch(contactRequest())
   const config = {
       method: "post",
-      url: "http://localhost:5000/asos/contact",
+      url: "/asos/contact",
       headers: {
           "Content-Type": "application/json"
       },

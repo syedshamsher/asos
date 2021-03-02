@@ -77,7 +77,7 @@ export const loginUser = (loginDetails) => (dispatch) => {
   dispatch(loginRequest())
   const config = {
     method: "post",
-    url: "http://localhost:5000/asos/user/profile",
+    url: "/asos/user/profile",
     headers: {
       "Content-Type": "application/json"
     },
@@ -103,7 +103,7 @@ export const getActiveUser = () => (dispatch) => {
     dispatch(activeUserRequest())
     const config = {
       method: "get",
-      url: "http://localhost:5000/asos/users",
+      url: "/asos/users",
       headers: {
         "Authorization": `Bearer ${data.token}`
       },
@@ -129,7 +129,7 @@ export const getCartData = () => (dispatch) => {
     dispatch(cartRequest())
     const config = {
       method: "get",
-      url: "http://localhost:5000/asos/cart",
+      url: "/asos/cart",
       headers: {
         "Authorization": `Bearer ${data.token}`
       },
@@ -155,7 +155,7 @@ export const getOrderData = () => (dispatch) => {
     dispatch(orderRequest())
     const config = {
       method: "get",
-      url: "http://localhost:5000/asos/order-details",
+      url: "/asos/order-details",
       headers: {
         "Authorization": `Bearer ${data.token}`
       },

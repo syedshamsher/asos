@@ -24,7 +24,7 @@ export const registerUser = (userDetails) => (dispatch) => {
   dispatch(registerRequest())
   const config = {
       method: "post",
-      url: "http://localhost:5000/asos/account/register",
+      url: "/asos/account/register",
       headers: {
           "Content-Type": "application/json"
       },

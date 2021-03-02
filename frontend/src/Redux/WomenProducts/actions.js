@@ -20,7 +20,7 @@ export const womenProductsFailure = (payload) => ({
 
 export const getWomenProducts = () => (dispatch) => {
     dispatch(womenProductsRequest())
-    axios.get('http://localhost:5000/asos/women')
+    axios.get('/asos/women')
         .then((res) => {
             dispatch(womenProductsSuccess(res.data))
         })

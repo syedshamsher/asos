@@ -36,7 +36,7 @@ export const addToCart = (addToCartDetails) => (dispatch) => {
   dispatch(addToCartRequest())
   const config = {
     method: "post",
-    url: "http://localhost:5000/asos/cart/add",
+    url: "/asos/cart/add",
     headers: {
       "Content-Type": "application/json"
     },
@@ -56,7 +56,7 @@ export const removeFromCart = (removeFromCartDetails) => (dispatch) => {
   dispatch(removeFromCartRequest())
   const config = {
     method: "post",
-    url: "http://localhost:5000/asos/cart/delete",
+    url: "/asos/cart/delete",
     headers: {
       "Content-Type": "application/json"
     },

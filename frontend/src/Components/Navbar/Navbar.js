@@ -4,8 +4,7 @@ import styled from "styled-components"
 import styles from "./style.module.css"
 import "./style.module.css"
 import { useHistory } from "react-router-dom";
-import { useSelector, useDispatch} from 'react-redux';
-import { search } from '../../Redux/SearchedProducts/action'
+import { useSelector} from 'react-redux';
 
 const Top = styled.div`
   display: flex;
@@ -147,9 +146,6 @@ const loggedInLinks = [
 function Navbar() {
   let history = useHistory()
   const token = useSelector(state => state.auth.token)
-  const dispatch = useDispatch()
-
-
 
     return (
       <>

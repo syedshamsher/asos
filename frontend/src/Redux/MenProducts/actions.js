@@ -20,7 +20,7 @@ export const menProductsFailure = (payload) => ({
 
 export const getMenProducts = () => (dispatch) => {
     dispatch(menProductsRequest())
-    axios.get('/asos/men')
+    axios.get('https://shamsher-asos.herokuapp.com/asos/men')
         .then((res) => {
             dispatch(menProductsSuccess(res.data))
         })

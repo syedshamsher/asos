@@ -56,7 +56,7 @@ export const removeFromCart = (removeFromCartDetails) => (dispatch) => {
   dispatch(removeFromCartRequest())
   const config = {
     method: "post",
-    url: "/asos/cart/delete",
+    url: "https://shamsher-asos.herokuapp.com/asos/cart/delete",
     headers: {
       "Content-Type": "application/json"
     },

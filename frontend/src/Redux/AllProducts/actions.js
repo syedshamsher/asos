@@ -20,7 +20,7 @@ export const allProductsFailure = (payload) => ({
 
 export const getAllProducts = () => (dispatch) => {
     dispatch(allProductsRequest())
-    axios.get('/asos/')
+    axios.get('https://shamsher-asos.herokuapp.com/asos/')
         .then((res) => {
             dispatch(allProductsSuccess(res.data))
         })

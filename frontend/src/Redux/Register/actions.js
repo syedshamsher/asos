@@ -24,7 +24,7 @@ export const registerUser = (userDetails) => (dispatch) => {
   dispatch(registerRequest())
   const config = {
       method: "post",
-      url: "/asos/account/register",
+      url: "https://shamsher-asos.herokuapp.com/asos/account/register",
       headers: {
           "Content-Type": "application/json"
       },

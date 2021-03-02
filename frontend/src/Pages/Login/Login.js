@@ -122,6 +122,7 @@ const Login = () => {
                             </div>
                             <Input
                                 name="loginPassword"
+                                type="password"
                                 value={loginPassword}
                                 onChange={(e) => setLoginPassword(e.target.value)}
                             />
@@ -180,6 +181,7 @@ const Login = () => {
                             </div>
                             <Input
                                 name="regPassword"
+                                type="password"
                                 value={regPassword}
                                 onChange={(e) => setRegPassword(e.target.value)}
                             />

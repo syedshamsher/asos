@@ -28,6 +28,17 @@ Run:npm run dev to run the App
 App runs on port 3000
 Server runs on port 5000
 
+## <code>Sneak Peak</code>
+![img](./images/asos.gif)
+## <code>Product Page</code>
+![img](./images/view-product-page.png)
+## <code>Cart Page</code>
+![img](./images/cart-page.png)
+## <code>Checkout Page</code>
+![img](./images/checkout-page.png)
+## <code>Profile Page</code>
+![img](./images/profile-page.png)
+
 ## Tech Library used:
   <ul>
   <li>React APP</li>

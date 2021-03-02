@@ -13,7 +13,7 @@ server.use(responseTime());
 dotenv.config();
 
 //connection to dataBase
-mongoose.connect(process.env.MONGO_ATLAS_URI || 'development', {
+mongoose.connect(process.env.MONGO_ATLAS_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
@@ -33,8 +33,3 @@ const port = process.env.PORT || 5000
 server.listen(port, () => {
     console.log("server is up and running");
 })
-
-// rendering front-end
-const routes=['/','/auth','/user/profile','/men','/women','/query','/men/:product_id','/women/:product_id','/cart','/contact','/cart/checkout']
-routes.map(route=>server.get(route,(req,res)=>{res.sendFile(path.join(__dirname,'..', 'frontend','build','index.html'));}))
-routes.map(route=>server.use(route,express.static(path.join(__dirname, '..', 'frontend','build'))))

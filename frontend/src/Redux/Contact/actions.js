@@ -23,7 +23,7 @@ export const contactUser = (userDetails) => (dispatch) => {
   dispatch(contactRequest())
   const config = {
       method: "post",
-      url: "https://shamsher-asos.herokuapp.com/asos/contact",
+      url: `${process.env.REACT_APP_BASE_URL}/asos/contact`,
       headers: {
           "Content-Type": "application/json"
       },

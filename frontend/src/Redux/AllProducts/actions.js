@@ -19,8 +19,9 @@ export const allProductsFailure = (payload) => ({
 })
 
 export const getAllProducts = () => (dispatch) => {
+    console.log(`${process.env.REACT_APP_BASE_URL}/asos/`);
     dispatch(allProductsRequest())
-    axios.get('https://shamsher-asos.herokuapp.com/asos/')
+    axios.get(`${process.env.REACT_APP_BASE_URL}/asos/`)
         .then((res) => {
             dispatch(allProductsSuccess(res.data))
         })

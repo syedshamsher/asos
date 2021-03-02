@@ -20,7 +20,7 @@ export const womenProductsFailure = (payload) => ({
 
 export const getWomenProducts = () => (dispatch) => {
     dispatch(womenProductsRequest())
-    axios.get('https://shamsher-asos.herokuapp.com/asos/women')
+    axios.get(`${process.env.REACT_APP_BASE_URL}/asos/women`)
         .then((res) => {
             dispatch(womenProductsSuccess(res.data))
         })

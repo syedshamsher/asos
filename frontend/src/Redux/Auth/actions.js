@@ -77,7 +77,7 @@ export const loginUser = (loginDetails) => (dispatch) => {
   dispatch(loginRequest())
   const config = {
     method: "post",
-    url: "https://shamsher-asos.herokuapp.com/asos/user/profile",
+    url: `${process.env.REACT_APP_BASE_URL}/asos/user/profile`,
     headers: {
       "Content-Type": "application/json"
     },
@@ -103,7 +103,7 @@ export const getActiveUser = () => (dispatch) => {
     dispatch(activeUserRequest())
     const config = {
       method: "get",
-      url: "https://shamsher-asos.herokuapp.com/asos/users",
+      url: `${process.env.REACT_APP_BASE_URL}/asos/users`,
       headers: {
         "Authorization": `Bearer ${data.token}`
       },
@@ -129,7 +129,7 @@ export const getCartData = () => (dispatch) => {
     dispatch(cartRequest())
     const config = {
       method: "get",
-      url: "https://shamsher-asos.herokuapp.com/asos/cart",
+      url: `${process.env.REACT_APP_BASE_URL}/asos/cart`,
       headers: {
         "Authorization": `Bearer ${data.token}`
       },
@@ -155,7 +155,7 @@ export const getOrderData = () => (dispatch) => {
     dispatch(orderRequest())
     const config = {
       method: "get",
-      url: "https://shamsher-asos.herokuapp.com/asos/order-details",
+      url: `${process.env.REACT_APP_BASE_URL}/asos/order-details`,
       headers: {
         "Authorization": `Bearer ${data.token}`
       },

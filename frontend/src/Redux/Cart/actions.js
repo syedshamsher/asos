@@ -36,7 +36,7 @@ export const addToCart = (addToCartDetails) => (dispatch) => {
   dispatch(addToCartRequest())
   const config = {
     method: "post",
-    url: "/asos/cart/add",
+    url: `${process.env.REACT_APP_BASE_URL}/asos/cart/add`,
     headers: {
       "Content-Type": "application/json"
     },
@@ -56,7 +56,7 @@ export const removeFromCart = (removeFromCartDetails) => (dispatch) => {
   dispatch(removeFromCartRequest())
   const config = {
     method: "post",
-    url: "https://shamsher-asos.herokuapp.com/asos/cart/delete",
+    url: `${process.env.REACT_APP_BASE_URL}/asos/cart/delete`,
     headers: {
       "Content-Type": "application/json"
     },

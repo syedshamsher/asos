@@ -70,7 +70,10 @@ Server runs on port 5000
     <li>styled-components</li>
   </ul>
   
+# <a href="https://asos-client.netlify.app/" > Demo </a>
+  
 
 ## Contributors
 
 <h3>Shamsher Ali</h3>👨‍- <a href="https://github.com/syedshamsher" >Shamsher</a>
+<h4>I take all the responsiblity for every single line of code.</h4>

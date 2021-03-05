@@ -1,8 +1,7 @@
 # asos
 
-### A Shopping Web Application Inspired By Asos.com
+### An Effort into making a pixel perfect fullstack shopping website inspired By Asos.com
  
-<h3> An Effort into making a pixel perfect fullstack shopping website. </h3>
 <div>
   Asos is an online fashion website, offers great services to is customer. Customer can explore various products and can buy them with a successful payment. Reachers can also send feedback message to the provider.
  </div>

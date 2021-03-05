@@ -1,6 +1,6 @@
 # asos
 
-# A Shopping Web Application Inspired By Asos.com
+### A Shopping Web Application Inspired By Asos.com
  
 <h3> An Effort into making a pixel perfect fullstack shopping website. </h3>
 <div>

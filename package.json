@@ -10,7 +10,7 @@
     "client": "npm run start --prefix frontend",
     "client-prod": "npm run build --prefix frontend",
     "dev": "npm install && concurrently \"npm run server\" \"npm run client\" ",
-    "prod": "npm install && concurrently \"npm run server\" \"npm run client\" "
+    "prod": "npm install && concurrently \"npm run server\" \"npm run client-prod\" "
   },
   "repository": {
     "type": "git",

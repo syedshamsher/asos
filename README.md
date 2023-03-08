@@ -1,7 +1,7 @@
 # asos
 
 ### An Effort into making a pixel perfect fullstack shopping website inspired By Asos.com
- 
+
 <div>
   Asos is an online fashion website, offers great services to is customer. Customer can explore various products and can buy them with a successful payment. Reachers can also send feedback message to the provider.
  </div>
@@ -20,25 +20,35 @@
 
 ### Installation and Setup Instructions
 
-Clone this repository. 
+Clone this repository.
 You will need node and npm installed globally on your machine.
 Installation: npm install To install dependencies
 Run:npm run dev to run the App
 App runs on port 3000
-Server runs on port 5000
+Server runs on port 5555
 
 ## <code>Sneak Peak</code>
+
 ![img](./images/asos.gif)
+
 ## <code>Product Page</code>
+
 ![img](./images/view-product-page.png)
+
 ## <code>Cart Page</code>
+
 ![img](./images/cart-page.png)
+
 ## <code>Checkout Page</code>
+
 ![img](./images/checkout-page.png)
+
 ## <code>Profile Page</code>
+
 ![img](./images/profile-page.png)
 
 ## Tech Library used:
+
   <ul>
   <li>React APP</li>
   <li>Axios</li>
@@ -70,7 +80,7 @@ Server runs on port 5000
   </ul>
   
 # <a href="https://asos-client.netlify.app/" > Demo </a>
-  
+
 
 ## Contributors
 

@@ -31,7 +31,7 @@ mongoose.connect(
 
 server.use("/asos", shoppingRoute);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5555;
 
 server.listen(port, () => {
   console.log(`server is up and running at port ${port}`);

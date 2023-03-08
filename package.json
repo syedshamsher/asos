@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\" ",
+    "build": "concurrently \"npm run server\" \"npm run client\" ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon backend/server",
-    "client": "npm start --prefix frontend",
+    "client": "npm build --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "repository": {

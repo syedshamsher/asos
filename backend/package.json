@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/syedshamsher/shopping-app#readme",
   "dependencies": {
+    "nodemon": "^2.0.12",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "concurrently": "^5.3.0",
